@@ -28,6 +28,10 @@ dependencies {
 	modImplementation "org.quiltmc:quilt-loader:${rootProject.quilt_loader_version}"
 	modApi "org.quiltmc.quilted-fabric-api:quilted-fabric-api:${rootProject.quilt_fabric_api_version}"
 
+	implementation("com.github.LlamaLad7:MixinExtras:${rootProject.mixin_extras_version}")
+	annotationProcessor("com.github.LlamaLad7:MixinExtras:${rootProject.mixin_extras_version}")
+	include("com.github.LlamaLad7:MixinExtras:${rootProject.mixin_extras_version}")
+
 	modRuntimeOnly "curse.maven:friendsandfoes-quilt-628248:4255035"
 
 	common(project(path: ":common", configuration: "namedElements")) { transitive false }
