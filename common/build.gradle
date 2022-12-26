@@ -1,0 +1,37 @@
+architectury {
+	common(rootProject.enabled_platforms.split(","))
+}
+
+dependencies {
+	modImplementation "net.fabricmc:fabric-loader:${rootProject.fabric_loader_version}"
+
+	implementation("com.github.LlamaLad7:MixinExtras:${rootProject.mixin_extras_version}")
+	annotationProcessor("com.github.LlamaLad7:MixinExtras:${rootProject.mixin_extras_version}")
+
+	modImplementation("curse.maven:friendsandfoes-551364:4255033")
+}
+
+repositories {
+	maven {
+		name = 'Fabric'
+		url = 'https://maven.fabricmc.net/'
+	}
+
+	maven {
+		name = "Modrinth"
+		url = "https://api.modrinth.com/maven"
+
+		content {
+			includeGroup "maven.modrinth"
+		}
+	}
+
+	maven {
+		url "https://maven.terraformersmc.com/releases/"
+		content {
+			includeGroup "com.terraformersmc"
+		}
+	}
+
+	maven { url "https://www.cursemaven.com" }
+}

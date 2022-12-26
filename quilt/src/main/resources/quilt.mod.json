@@ -1,0 +1,49 @@
+{
+	"schema_version": 1,
+	"quilt_loader": {
+		"group": "${group}",
+		"id": "flowerymooblooms",
+		"version": "${modVersion}",
+		"name": "${modName}",
+		"description": "${modDescription}",
+		"authors": [
+			"${modAuthor}"
+		],
+		"contact": {
+			"homepage": "https://github.com/Faboslav/friends-and-foes-flowery-mooblooms",
+			"sources": "https://github.com/Faboslav/friends-and-foes-flowery-mooblooms",
+			"issues": "https://github.com/Faboslav/friends-and-foes-flowery-mooblooms/issues"
+		},
+		"license": "CC BY-NC-ND 4.0",
+		"icon": "icon.jpg",
+		"intermediate_mappings": "net.fabricmc:intermediary",
+		"environment": "*",
+		"entrypoints": {
+			"main": [
+				"com.faboslav.friendsandfoes.flowerymooblooms.quilt.FloweryMoobloomsQuilt"
+			]
+		},
+		"depends": [
+			{
+				"id": "java",
+				"version": ">=17"
+			},
+			{
+				"id": "minecraft",
+				"version": ">=1.19"
+			},
+			{
+				"id": "quilt_loader",
+				"version": "*"
+			},
+			{
+				"id": "quilt_base",
+				"version": "*"
+			},
+			{
+				"id": "friendsandfoes",
+				"version": ">=1.6.5"
+			}
+		]
+	}
+}
