@@ -8,7 +8,7 @@ dependencies {
 	implementation("com.github.LlamaLad7:MixinExtras:${rootProject.mixin_extras_version}")
 	annotationProcessor("com.github.LlamaLad7:MixinExtras:${rootProject.mixin_extras_version}")
 
-	modImplementation("curse.maven:friendsandfoes-551364:4255033")
+	modImplementation("curse.maven:friendsandfoes-551364:4274093")
 }
 
 repositories {
