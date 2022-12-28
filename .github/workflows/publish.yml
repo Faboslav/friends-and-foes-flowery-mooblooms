@@ -24,7 +24,6 @@ env:
     RETRY_ATTEMPTS: 3
     RELAY_DELAY: 10000
     VERSION_RESOLVER: latest
-    MODRINTH_ID: ECOSu6pa
 
 jobs:
     build:
@@ -110,7 +109,7 @@ jobs:
             -   name: "Publish Fabric to CurseForge"
                 uses: Kir-Antipov/mc-publish@v3.0
                 with:
-                    curseforge-id: 711899
+                    curseforge-id: 779833
                     curseforge-token: ${{ secrets.CURSEFORGE_RELEASE_TOKEN }}
 
                     files-primary: fabric/build/libs/friendsandfoes-flowerymooblooms-fabric-${{ github.ref_name }}.jar
@@ -140,7 +139,7 @@ jobs:
             -   name: "Publish Fabric to Modrinth"
                 uses: Kir-Antipov/mc-publish@v3.0
                 with:
-                    modrinth-id: ${{ env.MODRINTH_ID }}
+                    modrinth-id: ECOSu6pa
                     modrinth-featured: true
                     modrinth-unfeature-mode: version-intersection
                     modrinth-token: ${{ secrets.MODRINTH_RELEASE_TOKEN }}
@@ -190,7 +189,7 @@ jobs:
             -   name: "Publish Forge to CurseForge"
                 uses: Kir-Antipov/mc-publish@v3.0
                 with:
-                    curseforge-id: 711903
+                    curseforge-id: 782443
                     curseforge-token: ${{ secrets.CURSEFORGE_RELEASE_TOKEN }}
 
                     files-primary: forge/build/libs/friendsandfoes-flowerymooblooms-forge-${{ github.ref_name }}.jar
@@ -220,7 +219,7 @@ jobs:
             -   name: "Publish Forge to Modrinth"
                 uses: Kir-Antipov/mc-publish@v3.0
                 with:
-                    modrinth-id: ${{ env.MODRINTH_ID }}
+                    modrinth-id: wYtDgIUZ
                     modrinth-featured: true
                     modrinth-unfeature-mode: version-intersection
                     modrinth-token: ${{ secrets.MODRINTH_RELEASE_TOKEN }}
@@ -271,7 +270,7 @@ jobs:
             -   name: "Publish Quilt to CurseForge"
                 uses: Kir-Antipov/mc-publish@v3.0
                 with:
-                    curseforge-id: 711906
+                    curseforge-id: 782457
                     curseforge-token: ${{ secrets.CURSEFORGE_RELEASE_TOKEN }}
 
                     files-primary: quilt/build/libs/friendsandfoes-flowerymooblooms-quilt-${{ github.ref_name }}.jar
@@ -301,7 +300,7 @@ jobs:
             -   name: "Publish Quilt to Modrinth"
                 uses: Kir-Antipov/mc-publish@v3.0
                 with:
-                    modrinth-id: ${{ env.MODRINTH_ID }}
+                    modrinth-id: DUug45uW
                     modrinth-featured: true
                     modrinth-unfeature-mode: version-intersection
                     modrinth-token: ${{ secrets.MODRINTH_RELEASE_TOKEN }}

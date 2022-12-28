@@ -9,7 +9,7 @@ version = "${modVersion}"
 displayName = "${modName}"
 authors = "${modAuthor}"
 description = "${modDescription}"
-logoFile = "icon.jpg"
+logoFile = "icon.png"
 
 [[dependencies.flowerymooblooms]]
 modId = "forge"
