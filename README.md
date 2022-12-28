@@ -42,7 +42,7 @@ mod, incorporate snippets into your own.
 
 [Modrinth (Fabric)]: https://modrinth.com/mod/friends-and-foes-flowery-mooblooms-fabric
 
-[CurseForge (Forge)]: https://www.curseforge.com/minecraft/mc-mods/friends-and-foes-forge-flowery-mooblooms-forge
+[CurseForge (Forge)]: https://www.curseforge.com/minecraft/mc-mods/friends-and-foes-flowery-mooblooms-forge
 
 [Modrinth (Forge)]: https://modrinth.com/mod/friends-and-foes-flowery-mooblooms-forge
 
