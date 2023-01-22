@@ -1,6 +1,7 @@
-<p align="center">
+<center>
     <img src="https://github.com/Faboslav/friends-and-foes/blob/master/.github/assets/logo/logo.jpg?raw=true" title="Friends&Foes" alt="Friends&Foes">
-</p>
+	<h1>Flowery Mooblooms</h1>
+</center>
 
 ---
 
