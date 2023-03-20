@@ -22,7 +22,7 @@ configurations {
 dependencies {
 	forge "net.minecraftforge:forge:${rootProject.forge_version}"
 
-	modRuntimeOnly "curse.maven:friendsandfoes-forge-602059:4274096"
+	modRuntimeOnly "curse.maven:friendsandfoes-forge-602059:4447710"
 
 	common(project(path: ":common", configuration: "namedElements")) { transitive false }
 	shadowCommon(project(path: ":common", configuration: "transformProductionForge")) { transitive = false }

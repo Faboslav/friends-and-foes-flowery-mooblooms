@@ -8,9 +8,11 @@
 		"${modAuthor}"
 	],
 	"contact": {
-		"homepage": "https://github.com/Faboslav/friends-and-foes-flowery-mooblooms",
-		"sources": "https://github.com/Faboslav/friends-and-foes-flowery-mooblooms",
-		"issues": "https://github.com/Faboslav/friends-and-foes-flowery-mooblooms"
+		"homepage": "https://github.com/Faboslav/friends-and-foes-beekeeper-hut-beekeeper-hut",
+		"sources": "https://github.com/Faboslav/friends-and-foes-beekeeper-hut-beekeeper-hut",
+		"issues": "https://github.com/Faboslav/friends-and-foes-beekeeper-hut-beekeeper-hut/issues",
+		"wiki": "https://github.com/Faboslav/friends-and-foes/wiki",
+		"discord": "https://discord.com/invite/QGwFvvMQCn"
 	},
 	"license": "CC BY-NC-ND 4.0",
 	"icon": "icon.png",
@@ -22,9 +24,9 @@
 	},
 	"depends": {
 		"java": ">=17",
-		"minecraft": ">=1.19",
+		"minecraft": ">=1.19.4",
 		"fabric": "*",
 		"fabricloader": "*",
-		"friendsandfoes": ">=1.6.5"
+		"friendsandfoes": ">=1.8.0"
 	}
 }
