@@ -10,24 +10,25 @@ displayName = "${modName}"
 authors = "${modAuthor}"
 description = "${modDescription}"
 logoFile = "icon.png"
+displayURL = "https://www.curseforge.com/minecraft/mc-mods/friends-and-foes-flowery-mooblooms-forge"
 
 [[dependencies.flowerymooblooms]]
 modId = "forge"
 mandatory = true
-versionRange = "[40.1.0,)"
+versionRange = "[45.0.9,)"
 ordering = "NONE"
 side = "BOTH"
 
 [[dependencies.flowerymooblooms]]
 modId = "minecraft"
 mandatory = true
-versionRange = "[1.19.2,)"
+versionRange = "[1.19.4,)"
 ordering = "NONE"
 side = "BOTH"
 
 [[dependencies.flowerymooblooms]]
 modId = "friendsandfoes"
 mandatory = true
-versionRange = "[1.6.5,)"
+versionRange = "[1.8.0,)"
 ordering = "NONE"
 side = "BOTH"
