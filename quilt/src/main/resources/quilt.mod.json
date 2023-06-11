@@ -32,7 +32,7 @@
 			},
 			{
 				"id": "minecraft",
-				"version": ">=1.19.4"
+				"version": ">=1.20"
 			},
 			{
 				"id": "quilt_loader",
@@ -44,7 +44,7 @@
 			},
 			{
 				"id": "friendsandfoes",
-				"version": ">=1.8.0"
+				"version": ">=1.9.0"
 			}
 		]
 	}

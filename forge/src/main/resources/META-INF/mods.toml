@@ -15,20 +15,20 @@ displayURL = "https://www.curseforge.com/minecraft/mc-mods/friends-and-foes-flow
 [[dependencies.flowerymooblooms]]
 modId = "forge"
 mandatory = true
-versionRange = "[45.0.9,)"
+versionRange = "[46,)"
 ordering = "NONE"
 side = "BOTH"
 
 [[dependencies.flowerymooblooms]]
 modId = "minecraft"
 mandatory = true
-versionRange = "[1.19.4,)"
+versionRange = "[1.20,)"
 ordering = "NONE"
 side = "BOTH"
 
 [[dependencies.flowerymooblooms]]
 modId = "friendsandfoes"
 mandatory = true
-versionRange = "[1.8.0,)"
+versionRange = "[1.9.0,)"
 ordering = "NONE"
 side = "BOTH"

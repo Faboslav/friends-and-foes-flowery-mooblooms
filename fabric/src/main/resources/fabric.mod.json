@@ -24,9 +24,9 @@
 	},
 	"depends": {
 		"java": ">=17",
-		"minecraft": ">=1.19.4",
+		"minecraft": ">=1.20",
 		"fabric": "*",
 		"fabricloader": "*",
-		"friendsandfoes": ">=1.8.0"
+		"friendsandfoes": ">=1.9.0"
 	}
 }
