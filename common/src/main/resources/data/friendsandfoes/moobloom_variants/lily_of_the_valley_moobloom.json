@@ -1,0 +1,5 @@
+{
+	"name": "lily_of_the_valley",
+	"flower_block": "minecraft:lily_of_the_valley",
+	"biomes": "#friendsandfoes:has_moobloom/lily_of_the_valley"
+}

@@ -29,7 +29,7 @@
 	<span style="font-size: 14px;">Friends&Foes - Flowery Mooblooms is a small addon for the Friends&Foes mod, adding one moobloom variant for each flower. Mooblooms can be found in meadow and flower forest biomes. You can check the <a href="https://github.com/Faboslav/friends-and-foes/wiki/Moobloom">wiki</a> to get more information about the mooblooms.</span>
 	<br>
 <br>
-	<span>Be aware that the main <a style="text-decoration: none;" href="https://modrinth.com/mod/friends-and-foes">Friends&Foes</a> mod is required to run this addon. Looking for the <a style="font-size: 14px;" href="https://modrinth.com/mod/friends-and-foes-flowery-mooblooms-forge">Forge</a> or <a style="font-size: 14px;" href="https://modrinth.com/mod/friends-and-foes-flowery-mooblooms-quilt">Quilt</a> version?</span>
+	<span>Be aware that the main <a style="text-decoration: none;" href="https://modrinth.com/mod/friends-and-foes">Friends&Foes</a> mod is required to run this addon.</span>
 </p>
 
 <h2>🐮 Moobloom variants</h2>

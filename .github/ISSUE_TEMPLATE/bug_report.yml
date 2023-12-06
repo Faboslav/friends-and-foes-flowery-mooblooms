@@ -26,7 +26,6 @@ body:
             options:
                 - Fabric
                 - Forge
-                - Quilt
         validations:
             required: true
     -   type: input

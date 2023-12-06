@@ -1,0 +1,5 @@
+{
+	"name": "poppy",
+	"flower_block": "minecraft:poppy",
+	"biomes": "#friendsandfoes:has_moobloom/poppy"
+}
