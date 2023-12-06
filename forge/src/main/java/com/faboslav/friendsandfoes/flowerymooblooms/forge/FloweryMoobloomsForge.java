@@ -16,6 +16,5 @@ public final class FloweryMoobloomsForge
 	}
 
 	private static void init(final FMLCommonSetupEvent event) {
-		event.enqueueWork(FloweryMooblooms::postInit);
 	}
 }

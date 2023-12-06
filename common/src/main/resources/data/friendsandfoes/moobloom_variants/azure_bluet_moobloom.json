@@ -1,0 +1,5 @@
+{
+	"name": "azure_bluet",
+	"flower_block": "minecraft:azure_bluet",
+	"biomes": "#friendsandfoes:has_moobloom/azure_bluet"
+}

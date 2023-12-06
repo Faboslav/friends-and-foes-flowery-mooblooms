@@ -1,0 +1,5 @@
+{
+	"name": "rose_bush",
+	"flower_block": "minecraft:rose_bush",
+	"biomes": "#friendsandfoes:has_moobloom/rose_bush"
+}
