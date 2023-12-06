@@ -1,0 +1,5 @@
+{
+	"name": "cornflower",
+	"flower_block": "minecraft:cornflower",
+	"biomes": "#friendsandfoes:has_moobloom/cornflower"
+}

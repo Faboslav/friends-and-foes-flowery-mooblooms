@@ -15,8 +15,6 @@ Please feel free to [report crash/bug, share your ideas or give some feedback].
 - [Modrinth (Fabric)]
 - [CurseForge (Forge)]
 - [Modrinth (Forge)]
-- [CurseForge (Quilt)]
-- [Modrinth (Quilt)]
 - [Discord]
 
 ## Support
@@ -46,10 +44,6 @@ mod, incorporate snippets into your own.
 [CurseForge (Forge)]: https://www.curseforge.com/minecraft/mc-mods/friends-and-foes-flowery-mooblooms-forge
 
 [Modrinth (Forge)]: https://modrinth.com/mod/friends-and-foes-flowery-mooblooms-forge
-
-[CurseForge (Quilt)]: https://www.curseforge.com/minecraft/mc-mods/friends-and-foes-flowery-mooblooms-quilt
-
-[Modrinth (Quilt)]: https://modrinth.com/mod/friends-and-foes-flowery-mooblooms-quilt
 
 [Discord]: https://discord.com/invite/QGwFvvMQCn
 

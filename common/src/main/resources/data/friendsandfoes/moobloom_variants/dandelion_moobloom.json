@@ -1,0 +1,5 @@
+{
+	"name": "dandelion",
+	"flower_block": "minecraft:dandelion",
+	"biomes": "#friendsandfoes:has_moobloom/dandelion"
+}

@@ -1,0 +1,12 @@
+{
+	"replace": false,
+	"values": [
+		"minecraft:cherry_grove",
+		"minecraft:flower_forest",
+		{
+			"id": "#c:flower_forests",
+			"required": false
+		},
+		"minecraft:meadow"
+	]
+}

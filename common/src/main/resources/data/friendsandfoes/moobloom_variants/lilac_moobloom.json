@@ -1,0 +1,5 @@
+{
+	"name": "lilac",
+	"flower_block": "minecraft:lilac",
+	"biomes": "#friendsandfoes:has_moobloom/lilac"
+}

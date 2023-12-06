@@ -1,0 +1,21 @@
+{
+	"replace": false,
+	"values": [
+		"#friendsandfoes:has_moobloom/allium",
+		"#friendsandfoes:has_moobloom/azure_bluet",
+		"#friendsandfoes:has_moobloom/blue_orchid",
+		"#friendsandfoes:has_moobloom/cornflower",
+		"#friendsandfoes:has_moobloom/dandelion",
+		"#friendsandfoes:has_moobloom/lilac",
+		"#friendsandfoes:has_moobloom/lily_of_the_valley",
+		"#friendsandfoes:has_moobloom/orange_tulip",
+		"#friendsandfoes:has_moobloom/oxeye_daisy",
+		"#friendsandfoes:has_moobloom/peony",
+		"#friendsandfoes:has_moobloom/pink_tulip",
+		"#friendsandfoes:has_moobloom/poppy",
+		"#friendsandfoes:has_moobloom/red_tulip",
+		"#friendsandfoes:has_moobloom/rose_bush",
+		"#friendsandfoes:has_moobloom/sunflower",
+		"#friendsandfoes:has_moobloom/white_tulip"
+	]
+}

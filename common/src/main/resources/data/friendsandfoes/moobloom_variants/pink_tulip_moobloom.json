@@ -1,0 +1,5 @@
+{
+	"name": "pink_tulip",
+	"flower_block": "minecraft:pink_tulip",
+	"biomes": "#friendsandfoes:has_moobloom/pink_tulip"
+}
