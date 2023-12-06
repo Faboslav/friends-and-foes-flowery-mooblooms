@@ -1,0 +1,5 @@
+{
+	"name": "allium",
+	"flower_block": "minecraft:allium",
+	"biomes": "#friendsandfoes:has_moobloom/allium"
+}

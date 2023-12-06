@@ -1,0 +1,5 @@
+{
+	"name": "sunflower",
+	"flower_block": "minecraft:sunflower",
+	"biomes": "#friendsandfoes:has_moobloom/sunflower"
+}

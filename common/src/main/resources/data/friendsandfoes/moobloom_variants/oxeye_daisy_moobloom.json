@@ -1,0 +1,5 @@
+{
+	"name": "oxeye_daisy",
+	"flower_block": "minecraft:oxeye_daisy",
+	"biomes": "#friendsandfoes:has_moobloom/oxeye_daisy"
+}

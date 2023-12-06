@@ -1,0 +1,5 @@
+{
+	"name": "blue_orchid",
+	"flower_block": "minecraft:blue_orchid",
+	"biomes": "#friendsandfoes:has_moobloom/blue_orchid"
+}

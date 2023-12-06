@@ -5,10 +5,10 @@ architectury {
 dependencies {
 	modImplementation "net.fabricmc:fabric-loader:${rootProject.fabric_loader_version}"
 
-	implementation("com.github.LlamaLad7:MixinExtras:${rootProject.mixin_extras_version}")
-	annotationProcessor("com.github.LlamaLad7:MixinExtras:${rootProject.mixin_extras_version}")
+	// Mixin extras (https://github.com/LlamaLad7/MixinExtras)
+	implementation(annotationProcessor("io.github.llamalad7:mixinextras-fabric:${rootProject.mixin_extras_version}"))
 
-	modImplementation("curse.maven:friendsandfoes-551364:4274093")
+	modImplementation("curse.maven:friendsandfoes-551364:4929447")
 }
 
 repositories {
