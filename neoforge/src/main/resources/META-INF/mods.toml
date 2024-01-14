@@ -1,0 +1,24 @@
+modLoader = "javafml"
+loaderVersion = "*"
+license = "CC-BY-NC-ND-4.0"
+displayURL = "https://github.com/Faboslav/friends-and-foes-flowery-mooblooms"
+issueTrackerURL = "https://github.com/Faboslav/friends-and-foes-flowery-mooblooms/issues"
+
+[[mods]]
+modId = "${modId}"
+version = "${modVersion}"
+displayName = "${modName}"
+authors = "${modAuthor}"
+description = "${modDescription}"
+logoFile = "icon.png"
+logoBlur = false
+
+[[dependencies.${ modId }]]
+modId = "minecraft"
+mandatory = true
+versionRange = "[${minecraftVersion},)"
+
+[[dependencies.${ modId }]]
+modId = "friendsandfoes"
+mandatory = true
+versionRange = "[2.0.2,)"
