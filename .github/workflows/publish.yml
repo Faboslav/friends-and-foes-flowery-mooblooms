@@ -26,7 +26,7 @@ jobs:
     build:
         runs-on: ubuntu-latest
         name: "Build"
-        timeout-minutes: 30
+        timeout-minutes: 15
 
         steps:
             -   name: "Checkout repository"
@@ -49,7 +49,7 @@ jobs:
               run: ./gradlew build --no-daemon
 
             -   name: "Capture build artifacts"
-                uses: actions/upload-artifact@v3.1.0
+                uses: actions/upload-artifact@v4.1.0
                 with:
                     name: "friends-and-foes-flowery-mooblooms"
                     path: |
@@ -57,87 +57,44 @@ jobs:
                         forge/build/libs/friendsandfoes-flowerymooblooms-forge-${{ github.ref_name }}.jar
                         LICENSE.txt
 
-    publish-license-to-release:
+    publish-license:
         needs: build
         runs-on: ubuntu-latest
         name: "Publish license to GitHub"
-        timeout-minutes: 30
+        timeout-minutes: 10
 
         steps:
             -   name: "Download artifacts"
-                uses: actions/download-artifact@v3.0.0
+                uses: actions/download-artifact@v4.1.1
                 with:
                     name: "friends-and-foes-flowery-mooblooms"
 
             -   name: "Publish license to GitHub"
-                uses: AButler/upload-release-assets@v2.0
+                uses: AButler/upload-release-assets@v3.0
                 with:
                     files: 'LICENSE.txt'
                     repo-token: ${{ secrets.GITHUB_TOKEN }}
 
-    publish-fabric-to-github:
+    publish-fabric:
         needs: build
         runs-on: ubuntu-latest
-        name: "Publish Fabric to GitHub"
-        timeout-minutes: 30
+        name: "Publish Fabric to Github, CurseForge and Modrinth"
+        timeout-minutes: 10
 
         steps:
             -   name: "Download artifacts"
-                uses: actions/download-artifact@v3.0.0
+                uses: actions/download-artifact@v4.1.1
                 with:
                     name: "friends-and-foes-flowery-mooblooms"
 
-            -   name: "Publish Fabric to GitHub"
-                uses: AButler/upload-release-assets@v2.0
+            -   name: "Publish Fabric to Github, CurseForge and Modrinth"
+                uses: Kir-Antipov/mc-publish@v3.3
                 with:
-                    files: fabric/build/libs/friendsandfoes-flowerymooblooms-fabric-${{ github.ref_name }}.jar
-                    repo-token: ${{ secrets.GITHUB_TOKEN }}
+                    github-token: ${{ secrets.GITHUB_TOKEN }}
 
-    publish-fabric-to-curseforge:
-        needs: build
-        runs-on: ubuntu-latest
-        name: "Publish Fabric to CurseForge"
-        timeout-minutes: 30
-
-        steps:
-            -   name: "Download artifacts"
-                uses: actions/download-artifact@v3.0.0
-                with:
-                    name: "friends-and-foes-flowery-mooblooms"
-
-            -   name: "Publish Fabric to CurseForge"
-                uses: Kir-Antipov/mc-publish@v3.0
-                with:
                     curseforge-id: 779833
                     curseforge-token: ${{ secrets.CURSEFORGE_RELEASE_TOKEN }}
 
-                    files-primary: fabric/build/libs/friendsandfoes-flowerymooblooms-fabric-${{ github.ref_name }}.jar
-                    version-type: ${{ env.VERSION_TYPE }}
-                    loaders: fabric
-                    game-versions: ${{ env.GAME_VERSIONS }}
-                    name: Friends&Foes - Flowery Mooblooms ${{ github.ref_name }} (Fabric/Quilt)
-                    dependencies: ${{ env.FABRIC_DEPENDENCIES }}
-                    java: ${{ env.JAVA_VERSIONS }}
-
-                    retry-attempts: ${{ env.RETRY_ATTEMPTS }}
-                    retry-delay: ${{ env.RETRY_DELAY }}
-                    version-resolver: ${{ env.VERSION_RESOLVER }}
-
-    publish-fabric-to-modrinth:
-        needs: build
-        runs-on: ubuntu-latest
-        name: "Publish Fabric to Modrinth"
-        timeout-minutes: 30
-
-        steps:
-            -   name: "Download artifacts"
-                uses: actions/download-artifact@v3.0.0
-                with:
-                    name: "friends-and-foes-flowery-mooblooms"
-
-            -   name: "Publish Fabric to Modrinth"
-                uses: Kir-Antipov/mc-publish@v3.0
-                with:
                     modrinth-id: ECOSu6pa
                     modrinth-featured: true
                     modrinth-unfeature-mode: version-intersection
@@ -155,69 +112,26 @@ jobs:
                     retry-delay: ${{ env.RETRY_DELAY }}
                     version-resolver: ${{ env.VERSION_RESOLVER }}
 
-    publish-forge-to-github:
+    publish-forge:
         needs: build
         runs-on: ubuntu-latest
-        name: "Publish Forge to GitHub"
-        timeout-minutes: 30
+        name: "Publish Forge to Github, CurseForge and Modrinth"
+        timeout-minutes: 10
 
         steps:
             -   name: "Download artifacts"
-                uses: actions/download-artifact@v3.0.0
+                uses: actions/download-artifact@v4.1.1
                 with:
                     name: "friends-and-foes-flowery-mooblooms"
 
-            -   name: "Publish Forge to GitHub"
-                uses: AButler/upload-release-assets@v2.0
+            -   name: "Publish Forge to Github, CurseForge and Modrinth"
+                uses: Kir-Antipov/mc-publish@v3.3
                 with:
-                    files: forge/build/libs/friendsandfoes-flowerymooblooms-forge-${{ github.ref_name }}.jar
-                    repo-token: ${{ secrets.GITHUB_TOKEN }}
+                    github-token: ${{ secrets.GITHUB_TOKEN }}
 
-    publish-forge-to-curseforge:
-        needs: build
-        runs-on: ubuntu-latest
-        name: "Publish Forge to CurseForge"
-        timeout-minutes: 30
-
-        steps:
-            -   name: "Download artifacts"
-                uses: actions/download-artifact@v3.0.0
-                with:
-                    name: "friends-and-foes-flowery-mooblooms"
-
-            -   name: "Publish Forge to CurseForge"
-                uses: Kir-Antipov/mc-publish@v3.0
-                with:
                     curseforge-id: 782443
                     curseforge-token: ${{ secrets.CURSEFORGE_RELEASE_TOKEN }}
 
-                    files-primary: forge/build/libs/friendsandfoes-flowerymooblooms-forge-${{ github.ref_name }}.jar
-                    version-type: ${{ env.VERSION_TYPE }}
-                    loaders: forge
-                    game-versions: ${{ env.GAME_VERSIONS }}
-                    name: Friends&Foes - Flowery Mooblooms ${{ github.ref_name }} (Forge)
-                    dependencies: ${{ env.FORGE_DEPENDENCIES }}
-                    java: ${{ env.JAVA_VERSIONS }}
-
-                    retry-attempts: ${{ env.RETRY_ATTEMPTS }}
-                    retry-delay: ${{ env.RETRY_DELAY }}
-                    version-resolver: ${{ env.VERSION_RESOLVER }}
-
-    publish-forge-to-modrinth:
-        needs: build
-        runs-on: ubuntu-latest
-        name: "Publish Forge to Modrinth"
-        timeout-minutes: 30
-
-        steps:
-            -   name: "Download artifacts"
-                uses: actions/download-artifact@v3.0.0
-                with:
-                    name: "friends-and-foes-flowery-mooblooms"
-
-            -   name: "Publish Forge to Modrinth"
-                uses: Kir-Antipov/mc-publish@v3.0
-                with:
                     modrinth-id: wYtDgIUZ
                     modrinth-featured: true
                     modrinth-unfeature-mode: version-intersection
@@ -228,9 +142,9 @@ jobs:
                     loaders: forge
                     game-versions: ${{ env.GAME_VERSIONS }}
                     name: Friends&Foes - Flowery Mooblooms ${{ github.ref_name }} (Forge)
-                    version: forge-${{ github.ref_name }}
                     dependencies: ${{ env.FORGE_DEPENDENCIES }}
                     java: ${{ env.JAVA_VERSIONS }}
+
                     retry-attempts: ${{ env.RETRY_ATTEMPTS }}
                     retry-delay: ${{ env.RETRY_DELAY }}
                     version-resolver: ${{ env.VERSION_RESOLVER }}
