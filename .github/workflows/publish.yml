@@ -18,8 +18,6 @@ env:
         friends-and-foes | depends | *
     FORGE_DEPENDENCIES: |
         friends-and-foes-forge | depends | *
-    RETRY_ATTEMPTS: 3
-    RELAY_DELAY: 10000
     VERSION_RESOLVER: latest
 
 jobs:
@@ -107,8 +105,6 @@ jobs:
                     version: fabric-${{ github.ref_name }}
                     dependencies: ${{ env.FABRIC_DEPENDENCIES }}
                     java: ${{ env.JAVA_VERSIONS }}
-                    retry-attempts: ${{ env.RETRY_ATTEMPTS }}
-                    retry-delay: ${{ env.RETRY_DELAY }}
                     game-version-filter: ${{ env.VERSION_RESOLVER }}
 
     publish-forge:
@@ -142,7 +138,4 @@ jobs:
                     name: Friends&Foes - Flowery Mooblooms ${{ github.ref_name }} (Forge)
                     dependencies: ${{ env.FORGE_DEPENDENCIES }}
                     java: ${{ env.JAVA_VERSIONS }}
-
-                    retry-attempts: ${{ env.RETRY_ATTEMPTS }}
-                    retry-delay: ${{ env.RETRY_DELAY }}
                     game-version-filter: ${{ env.VERSION_RESOLVER }}
