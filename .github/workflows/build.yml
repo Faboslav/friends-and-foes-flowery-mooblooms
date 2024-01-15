@@ -31,8 +31,7 @@ jobs:
                     distribution: temurin
                     cache: gradle
 
-            -   name: "Make gradle wrapper executable"
-                run: chmod +x ./gradlew
-
-            -   name: "Build with gradle"
-                run: ./gradlew build --no-daemon
+            - name: "Build with Gradle"
+              uses: gradle/gradle-build-action@v2.11.1
+              with:
+                  arguments: build --no-daemon
