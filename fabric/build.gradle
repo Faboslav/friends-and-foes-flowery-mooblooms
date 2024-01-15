@@ -1,5 +1,5 @@
 plugins {
-	id "com.github.johnrengelman.shadow" version "7.1.2"
+	id "com.github.johnrengelman.shadow" version "8.1.1"
 }
 
 allprojects {
@@ -31,7 +31,7 @@ dependencies {
 	// Mixin extras (https://github.com/LlamaLad7/MixinExtras)
 	include(implementation(annotationProcessor("io.github.llamalad7:mixinextras-fabric:${rootProject.mixin_extras_version}")))
 
-	modRuntimeOnly "curse.maven:friendsandfoes-551364:4929447"
+	modRuntimeOnly "curse.maven:friendsandfoes-551364:5012903"
 
 	common(project(path: ":common", configuration: "namedElements")) { transitive false }
 	shadowCommon(project(path: ":common", configuration: "transformProductionFabric")) { transitive false }
@@ -65,18 +65,18 @@ shadowJar {
 	exclude "architectury.common.json"
 
 	configurations = [project.configurations.shadowCommon]
-	classifier "dev-shadow"
+	archiveClassifier.set("dev-shadow")
 }
 
 remapJar {
 	injectAccessWidener = true
 	input.set shadowJar.archiveFile
 	dependsOn shadowJar
-	classifier null
+	archiveClassifier.set(null)
 }
 
 jar {
-	classifier "dev"
+	archiveClassifier.set("dev")
 }
 
 sourcesJar {
