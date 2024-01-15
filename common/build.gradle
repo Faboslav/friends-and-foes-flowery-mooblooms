@@ -7,8 +7,6 @@ dependencies {
 
 	// Mixin extras (https://github.com/LlamaLad7/MixinExtras)
 	implementation(annotationProcessor("io.github.llamalad7:mixinextras-fabric:${rootProject.mixin_extras_version}"))
-
-	modImplementation("curse.maven:friendsandfoes-551364:4929447")
 }
 
 repositories {
