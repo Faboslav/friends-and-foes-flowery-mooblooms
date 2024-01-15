@@ -18,6 +18,11 @@ jobs:
         steps:
             -   name: "Checkout repository"
                 uses: actions/checkout@v3
+                with:
+                    fetch-depth: 0
+
+            -   name: "Validate gradle"
+                uses: gradle/wrapper-validation-action@v1
 
             -   name: "Set up JDK"
                 uses: actions/setup-java@v3.3.0
@@ -30,4 +35,4 @@ jobs:
                 run: chmod +x ./gradlew
 
             -   name: "Build with gradle"
-                run: ./gradlew clean build --no-daemon --refresh-dependencies --stacktrace
+                run: ./gradlew run --no-daemon
