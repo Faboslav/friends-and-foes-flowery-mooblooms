@@ -16,9 +16,6 @@ env:
         friends-and-foes | depends | *
     FORGE_DEPENDENCIES: |
         friends-and-foes-forge | depends | *
-    RETRY_ATTEMPTS: 3
-    RELAY_DELAY: 10000
-    VERSION_RESOLVER: latest
 
 jobs:
     build:
@@ -38,13 +35,13 @@ jobs:
                     java-version: 17
                     distribution: temurin
 
-            - name: "Setup Gradle"
-              uses: gradle/gradle-build-action@v2.11.1
-              with:
-                  cache-read-only: false
+            -   name: "Setup Gradle"
+                uses: gradle/gradle-build-action@v2.11.1
+                with:
+                    cache-read-only: false
 
-            - name: "Run Gradle build"
-              run: ./gradlew build --no-daemon
+            -   name: "Run Gradle build"
+                run: ./gradlew build --no-daemon
 
             -   name: "Capture build artifacts"
                 uses: actions/upload-artifact@v4.1.0
@@ -86,7 +83,7 @@ jobs:
                     name: "friends-and-foes-flowery-mooblooms"
 
             -   name: "Publish Fabric to Github, CurseForge and Modrinth"
-                uses: Kir-Antipov/mc-publish@v3.2
+                uses: Kir-Antipov/mc-publish@v3.3.0
                 with:
                     github-token: ${{ secrets.GITHUB_TOKEN }}
 
@@ -95,10 +92,9 @@ jobs:
 
                     modrinth-id: ECOSu6pa
                     modrinth-featured: true
-                    modrinth-unfeature-mode: version-intersection
                     modrinth-token: ${{ secrets.MODRINTH_RELEASE_TOKEN }}
 
-                    files-primary: fabric/build/libs/friendsandfoes-flowerymooblooms-fabric-${{ github.ref_name }}.jar
+                    files: fabric/build/libs/friendsandfoes-flowerymooblooms-fabric-${{ github.ref_name }}.jar
                     version-type: ${{ env.VERSION_TYPE }}
                     loaders: fabric
                     game-versions: ${{ env.GAME_VERSIONS }}
@@ -106,9 +102,6 @@ jobs:
                     version: fabric-${{ github.ref_name }}
                     dependencies: ${{ env.FABRIC_DEPENDENCIES }}
                     java: ${{ env.JAVA_VERSIONS }}
-                    retry-attempts: ${{ env.RETRY_ATTEMPTS }}
-                    retry-delay: ${{ env.RETRY_DELAY }}
-                    version-resolver: ${{ env.VERSION_RESOLVER }}
 
     publish-forge:
         needs: build
@@ -123,7 +116,7 @@ jobs:
                     name: "friends-and-foes-flowery-mooblooms"
 
             -   name: "Publish Forge to Github, CurseForge and Modrinth"
-                uses: Kir-Antipov/mc-publish@v3.2
+                uses: Kir-Antipov/mc-publish@v3.3.0
                 with:
                     github-token: ${{ secrets.GITHUB_TOKEN }}
 
@@ -132,17 +125,12 @@ jobs:
 
                     modrinth-id: wYtDgIUZ
                     modrinth-featured: true
-                    modrinth-unfeature-mode: version-intersection
                     modrinth-token: ${{ secrets.MODRINTH_RELEASE_TOKEN }}
 
-                    files-primary: forge/build/libs/friendsandfoes-flowerymooblooms-forge-${{ github.ref_name }}.jar
+                    files: forge/build/libs/friendsandfoes-flowerymooblooms-forge-${{ github.ref_name }}.jar
                     version-type: ${{ env.VERSION_TYPE }}
                     loaders: forge
                     game-versions: ${{ env.GAME_VERSIONS }}
                     name: Friends&Foes - Flowery Mooblooms ${{ github.ref_name }} (Forge)
                     dependencies: ${{ env.FORGE_DEPENDENCIES }}
                     java: ${{ env.JAVA_VERSIONS }}
-
-                    retry-attempts: ${{ env.RETRY_ATTEMPTS }}
-                    retry-delay: ${{ env.RETRY_DELAY }}
-                    version-resolver: ${{ env.VERSION_RESOLVER }}
