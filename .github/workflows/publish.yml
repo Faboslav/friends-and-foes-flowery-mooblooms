@@ -50,7 +50,6 @@ jobs:
                     path: |
                         fabric/build/libs/friendsandfoes-flowerymooblooms-fabric-${{ github.ref_name }}.jar
                         neoforge/build/libs/friendsandfoes-flowerymooblooms-neoforge-${{ github.ref_name }}.jar
-                        forge/build/libs/friendsandfoes-flowerymooblooms-forge-${{ github.ref_name }}.jar
                         LICENSE.txt
 
     publish-license:
