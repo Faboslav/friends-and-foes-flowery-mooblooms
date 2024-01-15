@@ -15,10 +15,10 @@ logoBlur = false
 
 [[dependencies.${ modId }]]
 modId = "minecraft"
-mandatory = true
+required = true
 versionRange = "[${minecraftVersion},)"
 
 [[dependencies.${ modId }]]
 modId = "friendsandfoes"
-mandatory = true
+required = true
 versionRange = "[2.0.7,)"
