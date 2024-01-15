@@ -1,5 +1,5 @@
 plugins {
-	id "com.github.johnrengelman.shadow" version "7.1.2"
+	id "com.github.johnrengelman.shadow" version "8.1.1"
 }
 
 allprojects {
@@ -22,7 +22,11 @@ configurations {
 dependencies {
 	forge "net.minecraftforge:forge:${rootProject.minecraft_version}-${rootProject.forge_version}"
 
-	modRuntimeOnly "curse.maven:friendsandfoes-forge-602059:4929448"
+	// Mixin extras (https://github.com/LlamaLad7/MixinExtras)
+	implementation(annotationProcessor("io.github.llamalad7:mixinextras-common:${rootProject.mixin_extras_version}"))
+	implementation(include("io.github.llamalad7:mixinextras-forge:${rootProject.mixin_extras_version}"))
+
+	modRuntimeOnly "curse.maven:friendsandfoes-forge-602059:5012902"
 
 	common(project(path: ":common", configuration: "namedElements")) { transitive false }
 	shadowCommon(project(path: ":common", configuration: "transformProductionForge")) { transitive = false }
@@ -53,17 +57,17 @@ shadowJar {
 	exclude "architectury.common.json"
 
 	configurations = [project.configurations.shadowCommon]
-	classifier "dev-shadow"
+	archiveClassifier.set("dev-shadow")
 }
 
 remapJar {
 	input.set shadowJar.archiveFile
 	dependsOn shadowJar
-	classifier null
+	archiveClassifier.set(null)
 }
 
 jar {
-	classifier "dev"
+	archiveClassifier.set("dev")
 }
 
 sourcesJar {
