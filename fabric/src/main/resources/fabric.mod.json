@@ -26,6 +26,6 @@
 		"minecraft": ">=${minecraftVersion}",
 		"fabricloader": ">=${fabricLoaderVersion}",
 		"fabric": ">=${fabricApiVersion}",
-		"friendsandfoes": ">=2.0.2"
+		"friendsandfoes": ">=2.0.7"
 	}
 }
