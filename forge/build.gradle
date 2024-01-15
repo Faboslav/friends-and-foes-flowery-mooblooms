@@ -26,7 +26,7 @@ dependencies {
 	implementation(annotationProcessor("io.github.llamalad7:mixinextras-common:${rootProject.mixin_extras_version}"))
 	implementation(include("io.github.llamalad7:mixinextras-forge:${rootProject.mixin_extras_version}"))
 
-	modRuntimeOnly "curse.maven:friendsandfoes-forge-602059:5012902"
+	modRuntimeOnly "curse.maven:friendsandfoes-forge-602059:5012919"
 
 	common(project(path: ":common", configuration: "namedElements")) { transitive false }
 	shadowCommon(project(path: ":common", configuration: "transformProductionForge")) { transitive = false }
