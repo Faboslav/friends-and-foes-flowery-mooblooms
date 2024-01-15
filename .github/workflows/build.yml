@@ -11,7 +11,7 @@ on:
 
 jobs:
     build:
-        runs-on: macos-latest-large
+        runs-on: ubuntu-latest
         name: "Build"
         timeout-minutes: 30
 
