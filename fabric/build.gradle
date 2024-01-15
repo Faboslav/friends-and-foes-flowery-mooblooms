@@ -31,7 +31,7 @@ dependencies {
 	// Mixin extras (https://github.com/LlamaLad7/MixinExtras)
 	include(implementation(annotationProcessor("io.github.llamalad7:mixinextras-fabric:${rootProject.mixin_extras_version}")))
 
-	modRuntimeOnly "curse.maven:friendsandfoes-551364:5012915"
+	modRuntimeOnly "curse.maven:friendsandfoes-551364:5032280"
 
 	common(project(path: ":common", configuration: "namedElements")) { transitive false }
 	shadowCommon(project(path: ":common", configuration: "transformProductionFabric")) { transitive false }
