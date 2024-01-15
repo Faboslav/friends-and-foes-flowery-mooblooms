@@ -1,4 +1,4 @@
-package com.faboslav.friendsandfoes.neoforge;
+package com.faboslav.friendsandfoes.flowerymooblooms.neoforge;
 
 import com.faboslav.friendsandfoes.flowerymooblooms.FloweryMooblooms;
 import net.neoforged.bus.api.IEventBus;
