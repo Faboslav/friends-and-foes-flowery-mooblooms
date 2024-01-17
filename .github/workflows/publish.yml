@@ -134,5 +134,6 @@ jobs:
                     loaders: forge
                     game-versions: ${{ env.GAME_VERSIONS }}
                     name: Friends&Foes - Flowery Mooblooms ${{ github.ref_name }} (Forge)
+                    version: forge-${{ github.ref_name }}
                     dependencies: ${{ env.FORGE_DEPENDENCIES }}
                     java: ${{ env.JAVA_VERSIONS }}
