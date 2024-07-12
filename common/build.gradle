@@ -1,35 +1,9 @@
 architectury {
-	common(rootProject.enabled_platforms.split(","))
+	common(enabled_platforms.split(","))
 }
 
 dependencies {
-	modImplementation "net.fabricmc:fabric-loader:${rootProject.fabric_loader_version}"
+	modImplementation "net.fabricmc:fabric-loader:${fabric_loader_version}"
 
-	// Mixin extras (https://github.com/LlamaLad7/MixinExtras)
-	implementation(annotationProcessor("io.github.llamalad7:mixinextras-fabric:${rootProject.mixin_extras_version}"))
-}
-
-repositories {
-	maven {
-		name = 'Fabric'
-		url = 'https://maven.fabricmc.net/'
-	}
-
-	maven {
-		name = "Modrinth"
-		url = "https://api.modrinth.com/maven"
-
-		content {
-			includeGroup "maven.modrinth"
-		}
-	}
-
-	maven {
-		url "https://maven.terraformersmc.com/releases/"
-		content {
-			includeGroup "com.terraformersmc"
-		}
-	}
-
-	maven { url "https://www.cursemaven.com" }
+	implementation(annotationProcessor("io.github.llamalad7:mixinextras-common:${mixin_extras_version}"))
 }

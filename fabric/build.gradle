@@ -2,17 +2,17 @@ plugins {
 	id "com.github.johnrengelman.shadow" version "8.1.1"
 }
 
+def modrinth(String name, String version) {
+	return "maven.modrinth:$name:$version"
+}
+
 allprojects {
-	archivesBaseName = "friendsandfoes-flowerymooblooms-fabric-mc${rootProject.minecraft_version}"
+	archivesBaseName = "${mod_id}-fabric-mc${minecraft_version}"
 }
 
 architectury {
 	platformSetupLoomIde()
 	fabric()
-}
-
-loom {
-	accessWidenerPath = project(":common").loom.accessWidenerPath
 }
 
 configurations {
@@ -25,40 +25,16 @@ configurations {
 
 dependencies {
 	// Core dependencies
-	modImplementation "net.fabricmc:fabric-loader:${rootProject.fabric_loader_version}"
-	modApi "net.fabricmc.fabric-api:fabric-api:${rootProject.fabric_api_version}"
+	modImplementation "net.fabricmc:fabric-loader:${fabric_loader_version}"
+	modApi "net.fabricmc.fabric-api:fabric-api:${fabric_api_version}"
 
 	// Mixin extras (https://github.com/LlamaLad7/MixinExtras)
-	include(implementation(annotationProcessor("io.github.llamalad7:mixinextras-fabric:${rootProject.mixin_extras_version}")))
+	include(implementation(annotationProcessor("io.github.llamalad7:mixinextras-fabric:${mixin_extras_version}")))
 
-	modRuntimeOnly "curse.maven:friendsandfoes-551364:5012503"
+	modRuntimeOnly(modrinth("friends-and-foes", "fabric-mc${minecraft_version}-${friendsandfoes_version}"))
 
 	common(project(path: ":common", configuration: "namedElements")) { transitive false }
 	shadowCommon(project(path: ":common", configuration: "transformProductionFabric")) { transitive false }
-}
-
-processResources {
-	inputs.property 'modId', rootProject.mod_id
-	inputs.property 'modName', rootProject.mod_name
-	inputs.property 'modDescription', rootProject.mod_description
-	inputs.property 'modVersion', rootProject.mod_version
-	inputs.property 'modAuthor', rootProject.mod_author
-	inputs.property "minecraftVersion", rootProject.minecraft_version
-	inputs.property "fabricLoaderVersion", rootProject.fabric_loader_version
-	inputs.property "fabricApiVersion", rootProject.fabric_api_version
-
-	filesMatching("fabric.mod.json") {
-		expand([
-			'modId'              : rootProject.mod_id,
-			'modName'            : rootProject.mod_name,
-			'modDescription'     : rootProject.mod_description,
-			'modVersion'         : rootProject.mod_version,
-			'modAuthor'          : rootProject.mod_author,
-			"minecraftVersion"   : rootProject.minecraft_version,
-			"fabricLoaderVersion": rootProject.fabric_loader_version,
-			"fabricApiVersion"   : rootProject.fabric_api_version
-		])
-	}
 }
 
 shadowJar {
@@ -70,7 +46,7 @@ shadowJar {
 
 remapJar {
 	injectAccessWidener = true
-	input.set shadowJar.archiveFile
+	inputFile.set shadowJar.archiveFile
 	dependsOn shadowJar
 	archiveClassifier.set(null)
 }
@@ -105,13 +81,4 @@ repositories {
 			includeGroup "maven.modrinth"
 		}
 	}
-
-	maven {
-		url "https://maven.terraformersmc.com/releases/"
-		content {
-			includeGroup "com.terraformersmc"
-		}
-	}
-
-	maven { url "https://www.cursemaven.com" }
 }
