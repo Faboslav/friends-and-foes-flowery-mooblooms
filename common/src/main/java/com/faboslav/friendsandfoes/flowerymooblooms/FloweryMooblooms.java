@@ -10,7 +10,7 @@ public final class FloweryMooblooms
 	private static final Logger LOGGER = LoggerFactory.getLogger(FloweryMooblooms.MOD_ID);
 
 	public static Identifier makeID(String path) {
-		return new Identifier(
+		return Identifier.of(
 			MOD_ID,
 			path
 		);
