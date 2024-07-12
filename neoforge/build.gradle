@@ -2,8 +2,12 @@ plugins {
 	id "com.github.johnrengelman.shadow" version "8.1.1"
 }
 
+def modrinth(String name, String version) {
+	return "maven.modrinth:$name:$version"
+}
+
 allprojects {
-	archivesBaseName = "friendsandfoes-flowerymooblooms-neoforge-mc${rootProject.minecraft_version}"
+	archivesBaseName = "${mod_id}-neoforge-mc${minecraft_version}"
 }
 
 architectury {
@@ -19,35 +23,22 @@ configurations {
 	developmentNeoForge.extendsFrom common
 }
 
+
+loom {
+	accessWidenerPath = project(":common").loom.accessWidenerPath
+}
+
 dependencies {
-	neoForge "net.neoforged:neoforge:${rootProject.neoforge_version}"
+	neoForge "net.neoforged:neoforge:${neoforge_version}"
 
 	common(project(path: ":common", configuration: "namedElements")) { transitive false }
 	shadowCommon(project(path: ":common", configuration: "transformProductionNeoForge")) { transitive = false }
 
+	modRuntimeOnly(modrinth("friends-and-foes-forge", "neoforge-mc${minecraft_version}-${friendsandfoes_version}"))
+
 	// Mixin extras (https://github.com/LlamaLad7/MixinExtras)
-	implementation(annotationProcessor("io.github.llamalad7:mixinextras-common:${rootProject.mixin_extras_version}"))
-	implementation(include("io.github.llamalad7:mixinextras-neoforge:${rootProject.mixin_extras_version}"))
-
-	modRuntimeOnly "curse.maven:friendsandfoes-forge-602059:5032281"
-}
-
-processResources {
-	inputs.property "modId", rootProject.mod_id
-	inputs.property "modVersion", rootProject.mod_version
-	inputs.property "modName", rootProject.mod_name
-	inputs.property "modDescription", rootProject.mod_description
-	inputs.property "modAuthor", rootProject.mod_author
-	inputs.property "minecraftVersion", rootProject.minecraft_version
-
-	filesMatching("META-INF/mods.toml") {
-		expand "modId": rootProject.mod_id,
-			"modVersion": rootProject.mod_version,
-			"modName": rootProject.mod_name,
-			"modDescription": rootProject.mod_description,
-			"modAuthor": rootProject.mod_author,
-			"minecraftVersion": rootProject.minecraft_version
-	}
+	implementation(annotationProcessor("io.github.llamalad7:mixinextras-common:${mixin_extras_version}"))
+	implementation(include("io.github.llamalad7:mixinextras-neoforge:${mixin_extras_version}"))
 }
 
 shadowJar {
@@ -87,10 +78,11 @@ repositories {
 	}
 
 	maven {
-		url = "https://maven.theillusivec4.top/"
+		name = "Modrinth"
+		url = "https://api.modrinth.com/maven"
+
+		content {
+			includeGroup "maven.modrinth"
+		}
 	}
-
-	maven { url "https://www.cursemaven.com" }
-
-
 }
