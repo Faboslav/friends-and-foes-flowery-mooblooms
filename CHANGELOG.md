@@ -1,3 +1,8 @@
+## 3.0.0
+
+- Ported to 1.21.x
+- Internal refactor
+
 ## 2.0.2
 
 - Ported to 1.20.6/1.21

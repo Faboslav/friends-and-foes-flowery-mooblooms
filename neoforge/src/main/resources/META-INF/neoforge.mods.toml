@@ -1,6 +1,6 @@
 modLoader = "javafml"
 loaderVersion = "*"
-license = "CC-BY-NC-ND-4.0"
+license = "${modLicense}"
 displayURL = "https://github.com/Faboslav/friends-and-foes-flowery-mooblooms"
 issueTrackerURL = "https://github.com/Faboslav/friends-and-foes-flowery-mooblooms/issues"
 
@@ -14,11 +14,26 @@ logoFile = "icon.png"
 logoBlur = false
 
 [[dependencies.${ modId }]]
+modId = "neoforge"
+type = "required"
+versionRange = "*"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies.${ modId }]]
 modId = "minecraft"
-required = true
+type = "required"
 versionRange = "[${minMinecraftVersion},)"
+ordering = "NONE"
+side = "BOTH"
 
 [[dependencies.${ modId }]]
 modId = "friendsandfoes"
-required = true
+type = "required"
 versionRange = "[${friendsAndFoesVersion},)"
+ordering = "NONE"
+side = "BOTH"
+[dependencies.${ modId }.mc-publish]
+ignore = false
+modrinth = "friends-and-foes-forge"
+curseforge = "friends-and-foes-forge"

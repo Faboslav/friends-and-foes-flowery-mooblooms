@@ -4,14 +4,11 @@ help: ## Prints help for targets with comments
 build-project: ## Builds project
 	./gradlew build
 
+build-chiseled: ## Builds project
+	./gradlew chiseledBuild
+
 refresh: ## Refresh dependencies
 	./gradlew --refresh-dependencies
-
-clean-cache: ## Cleans cache
-	./gradlew --stop
-	rm -rf $GRADLE_HOME/caches/transforms-*
-	rm -rf $GRADLE_HOME/caches/build-cache-*
-	./gradlew clean
 
 gen-sources: ## Generate sources
 	./gradlew genSources
@@ -27,3 +24,9 @@ run-fabric-server: ## Runs fabric server
 
 run-neoforge-server: ## Runs neoforge server
 	./gradlew neoforge:runServer
+
+nuke: ## Nuke the project
+	./gradlew --stop
+	rm -rf $GRADLE_HOME/caches/transforms-*
+	rm -rf $GRADLE_HOME/caches/build-cache-*
+	find . -type d \( -name ".idea" -o -name ".kotlin" -o -name ".gradle" -o -name "build" -o -name "run" \) -exec rm -rf {} +
