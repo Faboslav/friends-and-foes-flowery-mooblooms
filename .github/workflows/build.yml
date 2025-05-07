@@ -96,15 +96,14 @@ jobs:
                 run: mkdir -p run/mods && cp artifacts/${{ steps.gradle-properties.outputs.MOD_ID }}-${{ matrix.mod_loader }}-${{ steps.gradle-properties.outputs.MOD_VERSION }}+mc${{ matrix.version }}.jar run/mods
 
             -   name: "Download Friends&Foes"
-                shell: bash
                 run: |
                     if [ "${{ matrix.mod_loader }}" = "fabric" ]; then
-                      MOD_NAME="friends-and-foes-fabric"
+                      MOD_NAME="friends-and-foes"
                     else
                       MOD_NAME="friends-and-foes-forge"
                     fi
                     
-                    MOD_URL=$(./.github/scripts/get-modrinth-dependency-url.sh "$MOD_NAME" "${{ matrix.mod_loader }}-mc${{ matrix.version }}-${{ steps.gradle-properties.outputs.DEPS_FRIENDSANDFOES }}" "${{ matrix.mod_loader }}")
+                    MOD_URL=$(./.github/scripts/get-modrinth-dependency-url.sh "$MOD_NAME" "${{ matrix.mod_loader }}-${{ steps.gradle-properties.outputs.DEPS_FRIENDSANDFOES }}+mc${{ matrix.version }}" "${{ matrix.mod_loader }}")
                     wget -P run/mods "$MOD_URL"
 
             -   name: "Download ResourcefulLib"
@@ -166,15 +165,14 @@ jobs:
                 run: mkdir -p run/mods && cp artifacts/${{ steps.gradle-properties.outputs.MOD_ID }}-${{ matrix.mod_loader }}-${{ steps.gradle-properties.outputs.MOD_VERSION }}+mc${{ matrix.version }}.jar run/mods
 
             -   name: "Download Friends&Foes"
-                shell: bash
                 run: |
                     if [ "${{ matrix.mod_loader }}" = "fabric" ]; then
-                      MOD_NAME="friends-and-foes-fabric"
+                      MOD_NAME="friends-and-foes"
                     else
                       MOD_NAME="friends-and-foes-forge"
                     fi
                     
-                    MOD_URL=$(./.github/scripts/get-modrinth-dependency-url.sh "$MOD_NAME" "${{ matrix.mod_loader }}-mc${{ matrix.version }}-${{ steps.gradle-properties.outputs.DEPS_FRIENDSANDFOES }}" "${{ matrix.mod_loader }}")
+                    MOD_URL=$(./.github/scripts/get-modrinth-dependency-url.sh "$MOD_NAME" "${{ matrix.mod_loader }}-${{ steps.gradle-properties.outputs.DEPS_FRIENDSANDFOES }}+mc${{ matrix.version }}" "${{ matrix.mod_loader }}")
                     wget -P run/mods "$MOD_URL"
 
             -   name: "Download ResourcefulLib"
