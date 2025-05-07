@@ -103,7 +103,7 @@ jobs:
                       MOD_NAME="friends-and-foes-forge"
                     fi
                     
-                    MOD_URL=$(./.github/scripts/get-modrinth-dependency-url.sh "$MOD_NAME" "${{ matrix.mod_loader }}-mc${{ matrix.version }}-${{ steps.gradle-properties.outputs.DEPS_FRIENDSANDFOES }}-" "${{ matrix.mod_loader }}")
+                    MOD_URL=$(./.github/scripts/get-modrinth-dependency-url.sh "$MOD_NAME" "${{ matrix.mod_loader }}-mc${{ matrix.version }}-${{ steps.gradle-properties.outputs.DEPS_FRIENDSANDFOES }}" "${{ matrix.mod_loader }}")
                     wget -P run/mods "$MOD_URL"
 
             -   name: "Download ResourcefulLib"
@@ -172,7 +172,7 @@ jobs:
                       MOD_NAME="friends-and-foes-forge"
                     fi
                     
-                    MOD_URL=$(./.github/scripts/get-modrinth-dependency-url.sh "$MOD_NAME" "${{ matrix.mod_loader }}-mc${{ matrix.version }}-${{ steps.gradle-properties.outputs.DEPS_FRIENDSANDFOES }}-" "${{ matrix.mod_loader }}")
+                    MOD_URL=$(./.github/scripts/get-modrinth-dependency-url.sh "$MOD_NAME" "${{ matrix.mod_loader }}-mc${{ matrix.version }}-${{ steps.gradle-properties.outputs.DEPS_FRIENDSANDFOES }}" "${{ matrix.mod_loader }}")
                     wget -P run/mods "$MOD_URL"
 
             -   name: "Download ResourcefulLib"
