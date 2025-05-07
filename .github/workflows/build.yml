@@ -76,11 +76,11 @@ jobs:
                 with:
                     fetch-depth: 0
 
-            - name: "Set up JDK"
-              uses: actions/setup-java@v4
-              with:
-                  java-version: 21
-                  distribution: temurin
+            -   name: "Set up JDK"
+                uses: actions/setup-java@v4
+                with:
+                    java-version: 21
+                    distribution: temurin
 
             -   name: "Parse gradle properties"
                 id: gradle-properties
@@ -97,7 +97,13 @@ jobs:
 
             -   name: "Download Friends&Foes"
                 run: |
-                    MOD_URL=$(./.github/scripts/get-modrinth-dependency-url.sh "friends-and-foes-forge" "${{ matrix.mod_loader }}-mc${{ matrix.version }}-${{ steps.gradle-properties.outputs.DEPS_FRIENDSANDFOES }}-" "${{ matrix.mod_loader }}")
+                    if [ "${{ matrix.mod_loader }}" = "fabric" ]; then
+                      MOD_NAME="friends-and-foes-fabric"
+                    else
+                      MOD_NAME="friends-and-foes-forge"
+                    fi
+                    
+                    MOD_URL=$(./.github/scripts/get-modrinth-dependency-url.sh "$MOD_NAME" "${{ matrix.mod_loader }}-mc${{ matrix.version }}-${{ steps.gradle-properties.outputs.DEPS_FRIENDSANDFOES }}-" "${{ matrix.mod_loader }}")
                     wget -P run/mods "$MOD_URL"
 
             -   name: "Download ResourcefulLib"
@@ -139,11 +145,11 @@ jobs:
                 with:
                     fetch-depth: 0
 
-            - name: "Set up JDK"
-              uses: actions/setup-java@v4
-              with:
-                  java-version: 21
-                  distribution: temurin
+            -   name: "Set up JDK"
+                uses: actions/setup-java@v4
+                with:
+                    java-version: 21
+                    distribution: temurin
 
             -   name: "Parse gradle properties"
                 id: gradle-properties
@@ -160,7 +166,13 @@ jobs:
 
             -   name: "Download Friends&Foes"
                 run: |
-                    MOD_URL=$(./.github/scripts/get-modrinth-dependency-url.sh "friends-and-foes-forge" "${{ matrix.mod_loader }}-mc${{ matrix.version }}-${{ steps.gradle-properties.outputs.DEPS_FRIENDSANDFOES }}-" "${{ matrix.mod_loader }}")
+                    if [ "${{ matrix.mod_loader }}" = "fabric" ]; then
+                      MOD_NAME="friends-and-foes-fabric"
+                    else
+                      MOD_NAME="friends-and-foes-forge"
+                    fi
+                    
+                    MOD_URL=$(./.github/scripts/get-modrinth-dependency-url.sh "$MOD_NAME" "${{ matrix.mod_loader }}-mc${{ matrix.version }}-${{ steps.gradle-properties.outputs.DEPS_FRIENDSANDFOES }}-" "${{ matrix.mod_loader }}")
                     wget -P run/mods "$MOD_URL"
 
             -   name: "Download ResourcefulLib"
