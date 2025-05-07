@@ -96,6 +96,7 @@ jobs:
                 run: mkdir -p run/mods && cp artifacts/${{ steps.gradle-properties.outputs.MOD_ID }}-${{ matrix.mod_loader }}-${{ steps.gradle-properties.outputs.MOD_VERSION }}+mc${{ matrix.version }}.jar run/mods
 
             -   name: "Download Friends&Foes"
+                shell: bash
                 run: |
                     if [ "${{ matrix.mod_loader }}" = "fabric" ]; then
                       MOD_NAME="friends-and-foes-fabric"
@@ -165,6 +166,7 @@ jobs:
                 run: mkdir -p run/mods && cp artifacts/${{ steps.gradle-properties.outputs.MOD_ID }}-${{ matrix.mod_loader }}-${{ steps.gradle-properties.outputs.MOD_VERSION }}+mc${{ matrix.version }}.jar run/mods
 
             -   name: "Download Friends&Foes"
+                shell: bash
                 run: |
                     if [ "${{ matrix.mod_loader }}" = "fabric" ]; then
                       MOD_NAME="friends-and-foes-fabric"
