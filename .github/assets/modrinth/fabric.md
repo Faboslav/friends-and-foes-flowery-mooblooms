@@ -1,38 +1,37 @@
 <br>
 
 <center>
-	<img src="https://raw.githubusercontent.com/Faboslav/friends-and-foes-flowery-mooblooms/master/.github/assets/logo/logo.png" width="700px" alt="Friends&amp;Foes - Flowery Mooblooms" title="Friends&amp;Foes - Flowery Mooblooms">
-	<h1>Flowery Mooblooms (Fabric)</h1>
+	<img src="https://raw.githubusercontent.com/Faboslav/friends-and-foes-flowery-mooblooms/master/.github/assets/logo/logo.png" width="100%" alt="Friends&amp;Foes - Flowery Mooblooms" title="Friends&amp;Foes - Flowery Mooblooms">
 </center>
+
+<br>
 
 <center>
-	<p>
-		<a style="text-decoration: none;" href="https://ko-fi.com/faboslav">
-			<img src="https://img.shields.io/static/v1?label=&amp;message=Ko-fi&amp;color=ff5f5f&amp;labelColor=111214&amp;logoColor=white&amp;style=for-the-badge&amp;logo=ko-fi" height="28" />
-		</a>
-		<a style="text-decoration: none;" href="https://www.patreon.com/Faboslav">
-			<img src="https://img.shields.io/endpoint.svg?url=https://shieldsio-patreon.vercel.app/api/?username=Faboslav&amp;type=patrons?color=c9d1d9&amp;label=&amp;labelColor=111214&amp;logoColor=white&amp;style=for-the-badge" height="28" />
-		</a>
-		<a style="text-decoration: none;" href="https://discord.gg/QGwFvvMQCn">
-			<img src="https://img.shields.io/discord/924964658169913404?color=5865F2&amp;label=&amp;labelColor=111214&amp;logoColor=white&amp;style=for-the-badge&amp;logo=discord" height="28" />
-		</a>
-		<a style="text-decoration: none;" href="https://modrinth.com/mod/fabric-api">
-				<img src="https://img.shields.io/static/v1?label=&amp;message=Requires Fabric API&amp;color=c9d1d9&amp;labelColor=111214&amp;logoColor=white&amp;style=for-the-badge&amp;logo=curseforge" width="208" height="28" />
-		</a>
-		<a style="text-decoration: none;" href="https://modrinth.com/mod/friends-and-foes">
-			<img src="https://img.shields.io/static/v1?label=&amp;message=Requires Friends%26Foes&amp;color=c9d1d9&amp;labelColor=111214&amp;logoColor=white&amp;style=for-the-badge&amp;logo=curseforge" height="28" />
-		</a>
-	</p>
+	<a style="text-decoration: none;" href="https://ko-fi.com/faboslav">
+		<img src="https://img.shields.io/static/v1?label=&message=Buy Me a Coffee&color=5b9c51&labelColor=5b9c51&logoColor=ffffff&style=for-the-badge&logo=ko-fi" alt="Buy Me a Coffee">
+	</a>
+	<a style="text-decoration: none;" href="https://www.patreon.com/Faboslav">
+		<img src="https://img.shields.io/static/v1?label=&message=Become a Patron&color=5b9c51&labelColor=5b9c51&logoColor=ffffff&style=for-the-badge&logo=patreon" alt="Patreon">
+	</a>
+	<a style="text-decoration: none;" href="https://discord.gg/QGwFvvMQCn">
+		<img src="https://img.shields.io/discord/924964658169913404?style=for-the-badge&logo=discord&logoColor=ffffff&label=Join Our Discord&labelColor=5b9c51&color=5b9c51" alt="Join Our Discord">
+	</a>
+	<a style="text-decoration: none;" href="https://github.com/Faboslav/friends-and-foes/wiki/Moobloom">
+		<img src="https://img.shields.io/static/v1?label=&message=Wiki&logoColor=ffffff&style=for-the-badge&logo=github&labelColor=5b9c51&color=5b9c51" alt="Wiki">
+	</a>
 </center>
 
-<p>
-	<span style="font-size: 14px;">Friends&Foes - Flowery Mooblooms is a small addon for the Friends&Foes mod, adding one moobloom variant for each flower. Mooblooms can be found in meadow and flower forest biomes. You can check the <a href="https://github.com/Faboslav/friends-and-foes/wiki/Moobloom">wiki</a> to get more information about the mooblooms.</span>
-	<br>
 <br>
-	<span>Be aware that the main <a style="text-decoration: none;" href="https://modrinth.com/mod/friends-and-foes">Friends&Foes</a> mod is required to run this addon.</span>
-</p>
 
-<h2>🐮 Moobloom variants</h2>
+<p>
+	<span style="font-size: 18px;">Friends&Foes - Flowery Mooblooms is a small addon for the Friends&Foes mod, adding one moobloom variant for each flower. Mooblooms can be found in meadow and flower forest biomes. You can check the <a href="https://github.com/Faboslav/friends-and-foes/wiki/Moobloom">wiki</a> to get more information about the mooblooms.</span>
+</p>
+	
+<br>
+<br>
+
+<h1>🐮 Moobloom variants</h1>
+
 <table>
 	<tbody>
 		<tr>
@@ -184,16 +183,18 @@
 
 <br>
 
-<h2>⚙️ Other addons / compat datapacks </h2>
+<h1>⚙️ Other addons / compat datapacks </h1>
+
 <ul>
-	<li><a style="text-decoration: none;" href="https://modrinth.com/mod/friends-and-foes-beekeeper-hut-fabric">Friends&Foes - Beekeeper Hut</a></li>	
-	<li><a style="text-decoration: none;" href="https://www.curseforge.com/minecraft/texture-packs/repurposed-structures-friends-and-foes-datapack">Repurposed Structures - Friends and Foes Compat Datapack</a></li>
+	<li><a style="font-size: 18px;" href="https://modrinth.com/mod/friends-and-foes-beekeeper-hut-fabric">Friends&Foes - Beekeeper Hut</a></li>	
+	<li><a style="font-size: 18px;" href="https://www.curseforge.com/minecraft/texture-packs/repurposed-structures-friends-and-foes-datapack">Repurposed Structures - Friends and Foes Compat Datapack</a></li>
 </ul>
 
 <br>
 
-<h2>💬 Community</h2>
-<p style="font-size: 14px;">
+<h1>💬 Community</h1>
+
+<p style="font-size: 18px;">
 	Feel free to <a style="text-decoration: none;" href="https://discord.gg/QGwFvvMQCn">join our community at the discord server</a> to chat, share your creations, ask any question or to simply be updated about the latest development of the mod and notified when the new release is out. Also don't hesitate to <a href="https://github.com/Faboslav/friends-and-foes-flowery-mooblooms/issues">report any crash or bug via GitHub issues</a>.
 </p>
 
@@ -201,15 +202,15 @@
 
 <h2>👋 Support</h2>
 
-<p><span style="font-size: 14px;">I will continue to develop my mods regardless of any support as it is my hobby, although most of my free time goes into development of my mods. So if you want to support me anyway, you can do that via <a style="font-size: 14px;" href="https://www.patreon.com/Faboslav">Patreon</a> or <a style="font-size: 14px;" href="https://ko-fi.com/faboslav">Ko-fi</a>. That said, I do appreciate all of your support.</span></p>
+<p><span style="font-size: 18px;">I will continue to develop my mods regardless of any support as it is my hobby, although most of my free time goes into development of my mods. So if you want to support me anyway, you can do that via <a style="font-size: 18px;" href="https://www.patreon.com/Faboslav">Patreon</a> or <a style="font-size: 18px;" href="https://ko-fi.com/faboslav">Ko-fi</a>. That said, I do appreciate all of your support.</span></p>
 
 <br>
 
-<h2>📜 License</h2>
+<h1>📜 License</h1>
 
 <p>
-	<span style="font-size: 14px;">The mod is licensed with <a style="font-size: 14px;" href="https://raw.githubusercontent.com/Faboslav/friends-and-foes-flowery-mooblooms/master/LICENSE.txt">CC BY-NC-ND 4.0</a> license.</span>
+	<span style="font-size: 18px;">The mod is licensed with <a style="font-size: 18px;" href="https://raw.githubusercontent.com/Faboslav/friends-and-foes-flowery-mooblooms/master/LICENSE.txt">CC BY-NC-ND 4.0</a> license.</span>
 </p>
 <p>
-	<span style="font-size: 14px;">Feel free to look over my code for examples of how i have implemented and solved various problems while writing this mod, incorporate snippets into your own code.&nbsp;Also feel free to use this mod in any modpack (although credit/link back to this page will be greatly appreciated).</span>
+	<span style="font-size: 18px;">Feel free to look over my code for examples of how i have implemented and solved various problems while writing this mod, incorporate snippets into your own code.&nbsp;Also feel free to use this mod in any modpack (although credit/link back to this page will be greatly appreciated).</span>
 </p>

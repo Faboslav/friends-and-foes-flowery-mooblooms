@@ -189,7 +189,7 @@
 <hr>
 
 <ul>
-	<li><a style="font-size: 18px;" href="https://www.curseforge.com/minecraft/mc-mods/friends-and-foes-beekeeper-hut-fabric">Friends&Foes - Beekeeper Hut</a></li>
+	<li><a style="font-size: 18px;" href="https://www.curseforge.com/minecraft/mc-mods/friends-and-foes-beekeeper-hut-forge">Friends&Foes - Beekeeper Hut</a></li>
 	<li><a style="font-size: 18px;" href="https://www.curseforge.com/minecraft/texture-packs/repurposed-structures-friends-and-foes-datapack">Repurposed Structures - Friends and Foes Compat Datapack</a></li>
 </ul>
 
