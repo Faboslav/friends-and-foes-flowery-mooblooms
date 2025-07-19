@@ -1,17 +1,22 @@
+val isCi = System.getenv("CI") == "true"
+gradle.startParameter.isParallelProjectExecutionEnabled = !isCi
+gradle.startParameter.isBuildCacheEnabled = !isCi
+gradle.startParameter.isConfigureOnDemand = !isCi
+
 pluginManagement {
-    repositories {
-        gradlePluginPortal()
-        mavenCentral()
-        maven("https://maven.fabricmc.net/")
-        maven("https://maven.neoforged.net/releases/")
-        maven("https://maven.minecraftforge.net")
-        maven("https://maven.kikugie.dev/snapshots")
+	repositories {
+		gradlePluginPortal()
+		mavenCentral()
+		maven("https://maven.fabricmc.net/")
+		maven("https://maven.neoforged.net/releases/")
+		maven("https://maven.minecraftforge.net")
+		maven("https://maven.kikugie.dev/snapshots")
 		maven("https://maven.kikugie.dev/releases")
-    }
+	}
 }
 
 plugins {
-	id("dev.kikugie.stonecutter") version "0.6"
+	id("dev.kikugie.stonecutter") version "0.7"
 	id("org.gradle.toolchains.foojay-resolver-convention") version "0.8.0"
 }
 
@@ -40,5 +45,5 @@ stonecutter {
 	}
 }
 
-rootProject.name = "friendsandfoes"
+rootProject.name = "friends-and-foes-flowery-mooblooms"
 

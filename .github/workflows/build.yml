@@ -41,8 +41,8 @@ jobs:
                 id: gradle-properties
                 run: ./.github/scripts/parse-gradle-properties.sh
 
-            -   name: "Run chiseled build"
-                run: ./gradlew chiseledBuild
+            -   name: "Run build"
+                run: ./gradlew build
 
             -   name: "Prepare artifacts"
                 run: |
@@ -76,11 +76,11 @@ jobs:
                 with:
                     fetch-depth: 0
 
-            -   name: "Set up JDK"
-                uses: actions/setup-java@v4
-                with:
-                    java-version: 21
-                    distribution: temurin
+            - name: "Set up JDK"
+              uses: actions/setup-java@v4
+              with:
+                  java-version: 21
+                  distribution: temurin
 
             -   name: "Parse gradle properties"
                 id: gradle-properties
@@ -145,11 +145,11 @@ jobs:
                 with:
                     fetch-depth: 0
 
-            -   name: "Set up JDK"
-                uses: actions/setup-java@v4
-                with:
-                    java-version: 21
-                    distribution: temurin
+            - name: "Set up JDK"
+              uses: actions/setup-java@v4
+              with:
+                  java-version: 21
+                  distribution: temurin
 
             -   name: "Parse gradle properties"
                 id: gradle-properties
