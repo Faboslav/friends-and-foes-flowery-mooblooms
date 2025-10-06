@@ -6,6 +6,12 @@ plugins {
 	id("dev.kikugie.fletching-table.fabric") version "0.1.0-alpha.20"
 }
 
+fletchingTable {
+	j52j.register("main") {
+		extension("json", "**/*.json5")
+	}
+}
+
 dependencies {
 	minecraft("com.mojang:minecraft:${commonMod.mc}")
 	mappings(loom.layered {

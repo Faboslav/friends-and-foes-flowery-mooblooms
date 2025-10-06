@@ -6,6 +6,12 @@ plugins {
 	id("dev.kikugie.fletching-table.neoforge") version "0.1.0-alpha.20"
 }
 
+fletchingTable {
+	j52j.register("main") {
+		extension("json", "**/*.json5")
+	}
+}
+
 neoForge {
 	enable {
 		version = commonMod.dep("neoforge")
