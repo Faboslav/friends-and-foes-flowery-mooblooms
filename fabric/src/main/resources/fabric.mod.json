@@ -23,7 +23,7 @@
 		]
 	},
 	"depends": {
-		"minecraft": ">=${minMinecraftVersion}-",
+		"minecraft": ">=${minMinecraftVersion}",
 		"fabricloader": "*",
 		"fabric": "*",
 		"friendsandfoes": ">=${friendsAndFoesVersion}"
