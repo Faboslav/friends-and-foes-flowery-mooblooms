@@ -8,11 +8,11 @@
 		"${modAuthor}"
 	],
 	"contact": {
-		"homepage": "https://github.com/Faboslav/friends-and-foes-flowery-mooblooms",
-		"sources": "https://github.com/Faboslav/friends-and-foes-flowery-mooblooms",
-		"issues": "https://github.com/Faboslav/friends-and-foes-flowery-mooblooms",
+		"homepage": "${modGitHub}",
+		"sources": "${modGitHub}",
+		"issues": "${modGitHub}/issues",
 		"wiki": "https://github.com/Faboslav/friends-and-foes/wiki",
-		"discord": "https://discord.com/invite/QGwFvvMQCn"
+		"discord": "${modDiscord}"
 	},
 	"license": "${modLicense}",
 	"icon": "icon.png",

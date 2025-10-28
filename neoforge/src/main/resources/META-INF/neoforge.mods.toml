@@ -1,8 +1,7 @@
 modLoader = "javafml"
 loaderVersion = "*"
 license = "${modLicense}"
-displayURL = "https://github.com/Faboslav/friends-and-foes-flowery-mooblooms"
-issueTrackerURL = "https://github.com/Faboslav/friends-and-foes-flowery-mooblooms/issues"
+issueTrackerURL = "${modGitHub}/issues"
 
 [[mods]]
 modId = "${modId}"
@@ -12,6 +11,7 @@ authors = "${modAuthor}"
 description = "${modDescription}"
 logoFile = "icon.png"
 logoBlur = false
+displayURL = "${modGitHub}"
 
 [[dependencies.${ modId }]]
 modId = "neoforge"
