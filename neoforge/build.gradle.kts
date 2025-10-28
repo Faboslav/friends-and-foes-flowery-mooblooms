@@ -1,9 +1,7 @@
 plugins {
 	`multiloader-loader`
 	id("net.neoforged.moddev")
-	kotlin("jvm") version "2.2.0"
-	id("com.google.devtools.ksp") version "2.2.0-2.0.2"
-	id("dev.kikugie.fletching-table.neoforge") version "0.1.0-alpha.20"
+	id("dev.kikugie.fletching-table.neoforge") version "0.1.0-alpha.22"
 }
 
 fletchingTable {
@@ -22,9 +20,9 @@ dependencies {
 	// Required dependencies
 	implementation(commonMod.modrinth("friends-and-foes-forge", "neoforge-${commonMod.dep("friendsandfoes")}+mc${commonMod.mc}"))
 	implementation(
-		"com.teamresourceful.resourcefullib:resourcefullib-neoforge-${commonMod.dep("resourceful-lib.mc")}:${
+		"com.teamresourceful.resourcefullib:resourcefullib-neoforge-${commonMod.dep("resourceful_lib.mc")}:${
 			commonMod.dep(
-				"resourceful-lib.lib"
+				"resourceful_lib.lib"
 			)
 		}"
 	)

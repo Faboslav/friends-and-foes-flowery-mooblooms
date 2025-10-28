@@ -1,5 +1,4 @@
 plugins {
-	id("java")
 	id("idea")
 	id("java-library")
 }
@@ -69,14 +68,16 @@ tasks {
 			"modAuthor" to commonMod.author,
 			"modDescription" to commonMod.description,
 			"modLicense" to commonMod.license,
+			"modGitHub" to commonMod.github,
+			"modDiscord" to commonMod.discord,
 			"minecraftVersion" to commonMod.propOrNull("minecraft_version"),
 			"minMinecraftVersion" to commonMod.propOrNull("min_minecraft_version"),
-			"fabricLoaderVersion" to commonMod.depOrNull("fabric-loader"),
-			"fabricApiVersion" to commonMod.depOrNull("fabric-api"),
+			"fabricLoaderVersion" to commonMod.depOrNull("fabric_loader"),
+			"fabricApiVersion" to commonMod.depOrNull("fabric_api"),
 			"neoForgeVersion" to commonMod.depOrNull("neoforge"),
 			"yaclVersion" to commonMod.depOrNull("yacl"),
-			"resourcefulLibMcVersion" to commonMod.depOrNull("resourceful-lib.mc"),
-			"resourcefulLibLibVersion" to commonMod.depOrNull("resourceful-lib.lib"),
+			"resourcefulLibMcVersion" to commonMod.depOrNull("resourceful_lib.mc"),
+			"resourcefulLibLibVersion" to commonMod.depOrNull("resourceful_lib.lib"),
 			"friendsAndFoesVersion" to commonMod.depOrNull("friendsandfoes"),
 		).filterValues { it?.isNotEmpty() == true }.mapValues { (_, v) -> v!! }
 
