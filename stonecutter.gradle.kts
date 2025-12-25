@@ -6,7 +6,6 @@ plugins {
 	id("fabric-loom") version "1.14-SNAPSHOT" apply false
 }
 
-
 stonecutter {
 	parameters {
 		filters.exclude("**/*.accesswidener")
