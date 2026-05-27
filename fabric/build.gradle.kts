@@ -31,7 +31,6 @@ dependencies {
 		include("required")
 	}
 	for (mod in friendsAndFoesWithDeps) modImplementation(mod)
-
 }
 
 loom {

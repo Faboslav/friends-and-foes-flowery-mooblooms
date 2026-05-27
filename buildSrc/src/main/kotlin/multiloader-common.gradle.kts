@@ -76,7 +76,6 @@ tasks {
 			"fabricLoaderVersion" to commonMod.depOrNull("fabric_loader"),
 			"fabricApiVersion" to commonMod.depOrNull("fabric_api"),
 			"neoForgeVersion" to commonMod.depOrNull("neoforge"),
-			"yaclVersion" to commonMod.depOrNull("yacl"),
 			"resourcefulLibMcVersion" to commonMod.depOrNull("resourceful_lib.mc"),
 			"resourcefulLibLibVersion" to commonMod.depOrNull("resourceful_lib.lib"),
 			"friendsAndFoesVersion" to commonMod.depOrNull("friendsandfoes"),

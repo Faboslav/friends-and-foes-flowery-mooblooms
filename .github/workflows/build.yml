@@ -115,12 +115,6 @@ jobs:
                     MOD_URL=$(./.github/scripts/get-modrinth-dependency-url.sh "$MOD_NAME" "${{ matrix.mod_loader }}-${{ steps.gradle-properties.outputs.DEPS_FRIENDSANDFOES }}+mc${{ matrix.version }}" "${{ matrix.mod_loader }}")
                     wget -P run/mods "$MOD_URL"
 
-            -   name: "Download YACL"
-                if: ${{ steps.gradle-properties.outputs.DEPS_YACL != '' }}
-                run: |
-                    MOD_URL=$(./.github/scripts/get-modrinth-dependency-url.sh "yacl" "${{ steps.gradle-properties.outputs.DEPS_YACL }}-${{ matrix.mod_loader }}" "${{ matrix.mod_loader }}")
-                    wget -P run/mods "$MOD_URL"
-
             -   name: Run ${{ matrix.version }} ${{ matrix.mod_loader }} client
                 uses: 3arthqu4ke/mc-runtime-test@9d9ea4af8ef6d82648051f750c49905f75d0c3bb # v4.4.0
                 with:
