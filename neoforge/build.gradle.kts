@@ -1,7 +1,7 @@
 plugins {
-	id("multiloader-loader")
+	`multiloader-loader`
 	id("net.neoforged.moddev")
-	id("dev.kikugie.fletching-table.neoforge") version "0.1.0-alpha.22"
+	id("dev.kikugie.fletching-table.neoforge") version "0.1.0-alpha.23"
 }
 
 fletchingTable {
@@ -18,26 +18,23 @@ neoForge {
 
 dependencies {
 	// Required dependencies
-	implementation(commonMod.modrinth("friends-and-foes-forge", "neoforge-${commonMod.dep("friendsandfoes")}+mc${commonMod.mc}"))
-	implementation(
-		"com.teamresourceful.resourcefullib:resourcefullib-neoforge-${commonMod.dep("resourceful_lib.mc")}:${
-			commonMod.dep(
-				"resourceful_lib.lib"
-			)
-		}"
-	)
-	implementation("dev.isxander:yet-another-config-lib:${commonMod.dep("yacl")}-neoforge")
-
+	val friendsAndFoesWithDeps: List<Dependency> = fletchingTable.modrinthBundle("friends-and-foes-forge", commonMod.mc, "neoforge") {
+		recursive = true
+		include("required")
+	}
+	for (mod in friendsAndFoesWithDeps) implementation(mod)
 }
 
 neoForge {
 	runs {
 		register("client") {
 			client()
+			ideFolderName = "NeoForge"
 			ideName = "NeoForge Client (${project.path})"
 		}
 		register("server") {
 			server()
+			ideFolderName = "NeoForge"
 			ideName = "NeoForge Server (${project.path})"
 		}
 	}

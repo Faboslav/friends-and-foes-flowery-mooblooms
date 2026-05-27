@@ -14,7 +14,7 @@ gen-sources: ## Generate sources
 	./gradlew genSources
 
 run-fabric-client: ## Runs fabric client
-	./gradlew fabric:runClient
+	./gradlew fabric:1.21.5:runClient
 
 run-neoforge-client: ## Runs neoforge client
 	./gradlew neoforge:runClient

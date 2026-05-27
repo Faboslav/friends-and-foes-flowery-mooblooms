@@ -25,7 +25,7 @@
 	"depends": {
 		"minecraft": ">=${minMinecraftVersion}",
 		"fabricloader": "*",
-		"fabric": "*",
+		"fabric-api": "*",
 		"friendsandfoes": ">=${friendsAndFoesVersion}"
 	},
 	"custom": {

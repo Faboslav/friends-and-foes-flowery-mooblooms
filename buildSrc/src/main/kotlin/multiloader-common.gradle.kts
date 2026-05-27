@@ -1,4 +1,5 @@
 plugins {
+	id("java")
 	id("idea")
 	id("java-library")
 }
