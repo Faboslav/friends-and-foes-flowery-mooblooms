@@ -1,6 +1,6 @@
 ## 3.0.3
 
-- Ported to 26.1.2/26.2
+- Ported to 26.1.2/26.2/26.3
 - Fixed textures
 
 ## 3.0.2
